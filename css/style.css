@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --font: "Montserrat", sans-serif;
+    --dark-blue: #001534;
+    --background: #eeecee;
+}
+
+html, body {
+    height: 100%;
+    background-color: var(--background);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.header-title {
+    font-family: var(--font);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+    overflow: hidden;
+}
+
+.img-side {
+    min-width: max-content;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.img-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.img-container img {
+    position: absolute;
+    width: 100%;
+}
+
+.img-btns-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.img-btns-container button {
+    width: 100%;
+    padding: 0.8rem 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--dark-blue);
+    color: #fff;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.img-btns-container button:hover {
+    background-color: #fff;
+    color: var(--dark-blue);
+}
+
+.customize-side {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    background-color: var(--dark-blue);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.section-customize {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.section-title {
+    font-family: var(--font);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.section-customize div {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+}
+
+.custom-option {
+    aspect-ratio: 1;
+    border: 1px solid rgba(225, 225, 225, 0.5);
+    border-radius: 0.5rem;
+    padding-top: 4px;
+    background: none;
+    cursor: pointer;
+}
+
+.custom-option img {
+    width: 100%;
+}
+
+.custom-option span {
+    color: red;
+    font-size: 1.7rem;
+}
+
+@media and {min-width: 768px} {
+    .main-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .img-side {
+        min-width: max-content;
+        width: 25%;
+    }
+
+    .customize-side {
+        width: 50%;
+        height: 80%;
+        padding: 1.5rem;
+    }
+}
+
+.footer-text {
+    font-family: var(--font);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    text-align: center;
+}
+
+.footer-text a {
+    color: var(--dark-blue);
+    text-decoration: none;
+}
